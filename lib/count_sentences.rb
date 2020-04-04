@@ -3,7 +3,11 @@ require 'pry'
 class String
 
   def sentence?
-    
+    if self.last == "."
+      true 
+    else 
+      false 
+    end 
   end
 
   def question?
@@ -15,6 +19,6 @@ class String
   end
 
   def count_sentences
-
+    self.split(/[.?!]+/).count
   end
 end
